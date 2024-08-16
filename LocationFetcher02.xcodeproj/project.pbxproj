@@ -10,9 +10,15 @@
 		01A3E2742C6F2D4100405AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3E2732C6F2D4100405AD4 /* AppDelegate.swift */; };
 		01A3E2762C6F2D4100405AD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3E2752C6F2D4100405AD4 /* SceneDelegate.swift */; };
 		01A3E2782C6F2D4100405AD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3E2772C6F2D4100405AD4 /* ViewController.swift */; };
-		01A3E27B2C6F2D4100405AD4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 01A3E27A2C6F2D4100405AD4 /* Base */; };
 		01A3E27D2C6F2D4200405AD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A3E27C2C6F2D4200405AD4 /* Assets.xcassets */; };
 		01A3E2802C6F2D4200405AD4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 01A3E27F2C6F2D4200405AD4 /* Base */; };
+		01A3E2902C6F2DAC00405AD4 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3E2882C6F2DAC00405AD4 /* LocationFetcher.swift */; };
+		01A3E2912C6F2DAC00405AD4 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3E2892C6F2DAC00405AD4 /* DashboardVC.swift */; };
+		01A3E2922C6F2DAC00405AD4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3E28A2C6F2DAC00405AD4 /* HomeVC.swift */; };
+		01A3E2932C6F2DAC00405AD4 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3E28B2C6F2DAC00405AD4 /* TabController.swift */; };
+		01A3E2942C6F2DAC00405AD4 /* TemplateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3E28C2C6F2DAC00405AD4 /* TemplateVC.swift */; };
+		01A3E2952C6F2DAC00405AD4 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3E28D2C6F2DAC00405AD4 /* UserVC.swift */; };
+		01A3E2962C6F2DAC00405AD4 /* MiscUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A3E28F2C6F2DAC00405AD4 /* MiscUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +26,16 @@
 		01A3E2732C6F2D4100405AD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01A3E2752C6F2D4100405AD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		01A3E2772C6F2D4100405AD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		01A3E27A2C6F2D4100405AD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01A3E27C2C6F2D4200405AD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01A3E27F2C6F2D4200405AD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01A3E2812C6F2D4200405AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01A3E2882C6F2DAC00405AD4 /* LocationFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		01A3E2892C6F2DAC00405AD4 /* DashboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		01A3E28A2C6F2DAC00405AD4 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		01A3E28B2C6F2DAC00405AD4 /* TabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		01A3E28C2C6F2DAC00405AD4 /* TemplateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateVC.swift; sourceTree = "<group>"; };
+		01A3E28D2C6F2DAC00405AD4 /* UserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
+		01A3E28F2C6F2DAC00405AD4 /* MiscUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,37 @@
 		01A3E2722C6F2D4100405AD4 /* LocationFetcher02 */ = {
 			isa = PBXGroup;
 			children = (
-				01A3E2732C6F2D4100405AD4 /* AppDelegate.swift */,
-				01A3E2752C6F2D4100405AD4 /* SceneDelegate.swift */,
-				01A3E2772C6F2D4100405AD4 /* ViewController.swift */,
-				01A3E2792C6F2D4100405AD4 /* Main.storyboard */,
-				01A3E27C2C6F2D4200405AD4 /* Assets.xcassets */,
-				01A3E27E2C6F2D4200405AD4 /* LaunchScreen.storyboard */,
+				01A3E2882C6F2DAC00405AD4 /* LocationFetcher.swift */,
+				01A3E28F2C6F2DAC00405AD4 /* MiscUtils.swift */,
+				01A3E28E2C6F2DAC00405AD4 /* Views */,
+				01A3E2872C6F2D9100405AD4 /* Supporting */,
 				01A3E2812C6F2D4200405AD4 /* Info.plist */,
 			);
 			path = LocationFetcher02;
+			sourceTree = "<group>";
+		};
+		01A3E2872C6F2D9100405AD4 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				01A3E2732C6F2D4100405AD4 /* AppDelegate.swift */,
+				01A3E2752C6F2D4100405AD4 /* SceneDelegate.swift */,
+				01A3E2772C6F2D4100405AD4 /* ViewController.swift */,
+				01A3E27C2C6F2D4200405AD4 /* Assets.xcassets */,
+				01A3E27E2C6F2D4200405AD4 /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		01A3E28E2C6F2DAC00405AD4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01A3E2892C6F2DAC00405AD4 /* DashboardVC.swift */,
+				01A3E28A2C6F2DAC00405AD4 /* HomeVC.swift */,
+				01A3E28B2C6F2DAC00405AD4 /* TabController.swift */,
+				01A3E28C2C6F2DAC00405AD4 /* TemplateVC.swift */,
+				01A3E28D2C6F2DAC00405AD4 /* UserVC.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +161,6 @@
 			files = (
 				01A3E27D2C6F2D4200405AD4 /* Assets.xcassets in Resources */,
 				01A3E2802C6F2D4200405AD4 /* Base in Resources */,
-				01A3E27B2C6F2D4100405AD4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +171,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A3E2942C6F2DAC00405AD4 /* TemplateVC.swift in Sources */,
+				01A3E2932C6F2DAC00405AD4 /* TabController.swift in Sources */,
 				01A3E2782C6F2D4100405AD4 /* ViewController.swift in Sources */,
+				01A3E2912C6F2DAC00405AD4 /* DashboardVC.swift in Sources */,
 				01A3E2742C6F2D4100405AD4 /* AppDelegate.swift in Sources */,
+				01A3E2962C6F2DAC00405AD4 /* MiscUtils.swift in Sources */,
+				01A3E2922C6F2DAC00405AD4 /* HomeVC.swift in Sources */,
+				01A3E2902C6F2DAC00405AD4 /* LocationFetcher.swift in Sources */,
+				01A3E2952C6F2DAC00405AD4 /* UserVC.swift in Sources */,
 				01A3E2762C6F2D4100405AD4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +187,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		01A3E2792C6F2D4100405AD4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01A3E27A2C6F2D4100405AD4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		01A3E27E2C6F2D4200405AD4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,9 +327,10 @@
 				DEVELOPMENT_TEAM = GL5QL25H5M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LocationFetcher02/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Turning on location services allows us to add weather related correlations to your dashboards.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Turning on location services allows us to add weather related correlations to your dashboards.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,9 +356,10 @@
 				DEVELOPMENT_TEAM = GL5QL25H5M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LocationFetcher02/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Turning on location services allows us to add weather related correlations to your dashboards.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Turning on location services allows us to add weather related correlations to your dashboards.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
