@@ -22,7 +22,7 @@ class LocationFetcher: NSObject, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     var arryUserDayLocation: [UserDayLocation] = []
-    
+    var updateStatus: ((Int) -> Void)?
     
     override init() {
         super.init()
@@ -54,7 +54,7 @@ class LocationFetcher: NSObject, CLLocationManagerDelegate {
         arryUserDayLocation.append(userDayLocation)
 
         saveUserLocation()
-
+        updateStatus?(arryUserDayLocation.count)
     }
     
     func saveUserLocation() {

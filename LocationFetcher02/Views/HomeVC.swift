@@ -16,13 +16,15 @@ class HomeVC: TemplateVC {
     let btnCheckUserDefaultUserLocation = UIButton()
     let btnDeleteUserDefaultUserLocation = UIButton()
     
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         locationFetcher = LocationFetcher.shared
-
+        locationFetcher.updateStatus = { [weak self] count in
+            self?.vwStatus.updateStatus?(count)
+        }// This instantiates the updateStatus declared in LocationFetcher
         self.setup_TopSafeBar()
         setup_status()
         setup_btnRequestLocationFetcherPermission()
@@ -32,6 +34,9 @@ class HomeVC: TemplateVC {
         setup_btnDeleteUserDefaultUserLocation()
     }
     func setup_status(){
+        vwStatus.updateStatus = { [weak self] count in
+            self?.vwStatus.lblLocationCount.text = "Location Count: \(count)"
+        }
         vwStatus.accessibilityIdentifier = "vwStatus"
         vwStatus.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(vwStatus)
@@ -190,6 +195,7 @@ class HomeVcStatus: UIView {
     
     var locationFetcher: LocationFetcher!
     let lblLocationCount = UILabel()
+    var updateStatus: ((Int) -> Void)?
     
     override init(frame: CGRect){
         super.init(frame:frame)
