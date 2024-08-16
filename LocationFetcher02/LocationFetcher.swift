@@ -23,6 +23,7 @@ class LocationFetcher: NSObject, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var arryUserDayLocation: [UserDayLocation] = []
     var updateStatus: ((Int) -> Void)?
+    var locationUpdateTimer: Timer?
     
     override init() {
         super.init()
@@ -36,32 +37,46 @@ class LocationFetcher: NSObject, CLLocationManagerDelegate {
     }
     
     func startUpdatingLocation() {
+//        locationManager.startUpdatingLocation()
+        // Use a timer to update location every 10 seconds
+        locationUpdateTimer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(startLocationUpdates), userInfo: nil, repeats: true)
+        locationUpdateTimer?.tolerance = 1.0 // Add a small tolerance to save battery
+    }
+    @objc private func startLocationUpdates() {
         locationManager.startUpdatingLocation()
+//        locationManager.requestLocation()
     }
     func stopMonitoringLocationChanges() {
 //        locationManager.stopMonitoringSignificantLocationChanges()
         locationManager.stopUpdatingLocation()
+        locationUpdateTimer?.invalidate() // Invalidate the timer
     }
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
+        locationManager.stopUpdatingLocation()
         let userDayLocation = UserDayLocation()
         userDayLocation.timestamp = timeStampsForFileNames()
         userDayLocation.latitude = location.coordinate.latitude
         userDayLocation.longitude = location.coordinate.longitude
-        print("saving data: time: \(userDayLocation.timestamp!), lat: \(userDayLocation.latitude!), lon: \(userDayLocation.longitude!)")
+//        print("saving data: time: \(userDayLocation.timestamp!), lat: \(userDayLocation.latitude!), lon: \(userDayLocation.longitude!)")
         arryUserDayLocation.append(userDayLocation)
 
         saveUserLocation()
         updateStatus?(arryUserDayLocation.count)
+        print("**********************")
+        print(" - made call to locationManager didUpdateLocations")
+        print("**********************")
+        // Stop updating location right after receiving the first update
+        
     }
     
     func saveUserLocation() {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(arryUserDayLocation) {
             UserDefaults.standard.set(encoded, forKey: "arryUserLocation")
-            print("saved to UserDefaults user_location")
+//            print("saved to UserDefaults user_location")
         } else {
             print("failed to save ")
         }
@@ -73,7 +88,7 @@ class LocationFetcher: NSObject, CLLocationManagerDelegate {
             do {
                 let decodedArray = try JSONDecoder().decode([UserDayLocation].self, from: encodedData)
                 arryUserDayLocation = decodedArray
-                print("Successfully loaded arryDataSourceObjects from UserDefaults")
+//                print("Successfully loaded arryDataSourceObjects from UserDefaults")
             } catch {
                 print("Failed to decode DataSourceObject: \(error)")
             }
